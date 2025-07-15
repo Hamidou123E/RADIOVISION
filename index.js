@@ -11,19 +11,16 @@ cloudinary.config({
   api_secret: "_pKK95qCs4VyrVhIeqYTt0Kj4FU",
 });
 
+// ❗ Ici, on retourne seulement les tags et le lien
 function formatResource(resource) {
-  const context = (resource.context && resource.context.custom) || {};
   return {
-    titre: context.titre || resource.public_id,
-    artiste: context.artiste || "Inconnu",
+    tags: resource.tags || [],
     url: resource.secure_url,
-    tags: resource.tags || [], // <--- On ajoute les tags ici !
   };
 }
 
 app.get("/media", async (req, res) => {
   try {
-    // Ajout de .with_field('tags') pour récupérer les tags
     const audioResponse = await cloudinary.search
       .expression("resource_type:video AND (format:mp3 OR format:wav)")
       .max_results(50)
