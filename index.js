@@ -8,7 +8,7 @@ app.use(cors());
 cloudinary.config({
   cloud_name: "dgkrg4kk0",
   api_key: "454854139817129",
-  api_secret: "_iqf4f8uufAbMd7Crjl6ppmHF80o",
+  api_secret: "iqf4f8uufAbMd7Crjl6ppmHF80o",
 });
 
 // ❗ Ici, on retourne seulement les tags et le lien
