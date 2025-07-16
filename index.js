@@ -6,9 +6,9 @@ const app = express();
 app.use(cors());
 
 cloudinary.config({
-  cloud_name: "dywtqopvn",
-  api_key: "653954857412156",
-  api_secret: "_pKK95qCs4VyrVhIeqYTt0Kj4FU",
+  cloud_name: "dgkrg4kk0",
+  api_key: "454854139817129",
+  api_secret: "_iqf4f8uufAbMd7Crjl6ppmHF80o",
 });
 
 // ❗ Ici, on retourne seulement les tags et le lien
